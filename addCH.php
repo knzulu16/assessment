@@ -5,7 +5,7 @@
 
     if(isset($_POST['name'])){
 
-         $name=$_POST[name];
+
          //Check if the field is completed
         if (strlen($_POST['name']) ==0) {
             $_SESSION['error'] = " Field is required";
@@ -16,7 +16,6 @@
 
         //Insert the data to the database
         $sql = 'INSERT INTO contract_house(name) VALUES (:nm)';
-        print($sql);
         $stmt = $pdo->prepare($sql);
         $stmt->execute(array (
             ':nm' => $_POST['name']));
@@ -26,11 +25,8 @@
 
 
 
-//        $sql = "UPDATE contract_house SET name=? WHERE id=?";
-//        $stmt= $dpo->prepare($sql);
-//        $stmt->execute([$name]);
 
-//    ?>
+    ?>
 
 
 
@@ -46,7 +42,7 @@
         <body>
         <h1>Enter Contact house</h1>
         <form method="POST">
-        <input type="text" name="name" placeholder="enter name contract house">
+        <input type="text" name="name" placeholder="enter name contract house" required>
         <input type="submit" name="submit">
         </form>
         </body>

@@ -1,4 +1,4 @@
-<?php
+//<?php
 //
 require_once('connectDB.php');
 
@@ -16,7 +16,6 @@ if(isset($_POST['description'])){
 
     //Insert the data to the database
     $sql = 'INSERT INTO application(description) VALUES (:descr)';
-    print($sql);
     $stmt = $pdo->prepare($sql);
     $stmt->execute(array (
         ':descr' => $_POST['description']));
@@ -24,7 +23,8 @@ if(isset($_POST['description'])){
     return;
 }
 
-//Updating the data from the database
+
+
 
 
    ?>
