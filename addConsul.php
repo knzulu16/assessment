@@ -32,8 +32,8 @@ require_once('connectDB.php');
 <body>
 <h1>Enter Consultant<h1>
         <form method="POST">
-            <input type="text" name="Name" placeholder="Enter name">
-            <input type="date" name="DOB" placeholder="Enter date of birth">
+            <input type="text" name="Name" required placeholder="Enter name">
+            <input type="date" name="DOB" required placeholder="Enter date of birth">
 
             <input type="text" name="applicationId" placeholder="Enter application Id">
 
