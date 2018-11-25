@@ -1,5 +1,4 @@
-//<?php
-//
+<?php
 require_once('connectDB.php');
 
 if(isset($_POST['description'])){
