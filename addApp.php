@@ -42,7 +42,7 @@ if(isset($_POST['description'])){
 <body>
 <h1>Enter Application</h1>
 <form method="POST">
-    <input type="text" name="description" placeholder="enter name application">
+    <input type="text" name="description" placeholder="enter name application" required>
     <input type="submit" name="submit">
 </form>
 </body>
