@@ -1,5 +1,4 @@
-<!---->
-<!--    --><?php
+<?php
 //
    require_once('connectDB.php');
 
@@ -9,7 +8,7 @@
          //Check if the field is completed
         if (strlen($_POST['name']) ==0) {
             $_SESSION['error'] = " Field is required";
-            header("Location:addApp.php");
+//            header("Location: getCh.php");
             error_log("Field entry fail");
             return;
         }
@@ -19,7 +18,8 @@
         $stmt = $pdo->prepare($sql);
         $stmt->execute(array (
             ':nm' => $_POST['name']));
-        $_SESSION['success']= "Record added";
+//        $_SESSION['success']= "Record added";
+        header("Location: getCh.php");
         return;
     }
 
@@ -40,8 +40,11 @@
     </head>
 
         <body>
+
+        <?php include "menu.php" ?>
+
         <h1>Enter Contact house</h1>
-        <form method="POST">
+        <form method="POST" >
         <input type="text" name="name" placeholder="enter name contract house" required>
         <input type="submit" name="submit">
         </form>

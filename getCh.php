@@ -15,6 +15,8 @@ if (isset($_POST['action']) and $_POST['action'] === 'Delete') {
     </style>
 </head>
 <body>
+<?php include "menu.php" ?>
+
 <h1>Contract Houses</h1>
 <table border="1">
     <tr>
@@ -39,6 +41,10 @@ if (isset($_POST['action']) and $_POST['action'] === 'Delete') {
     }
     ?>
 </table>
+
+<p>
+    <a href="addCH.php">Capture  Contract House</a>
+</p>
 
 </body>
 </html>
